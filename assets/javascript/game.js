@@ -1,5 +1,8 @@
+alert(" I will be more beautiful if you run me on IE");
+
 window.onload = function what() {
-    alert(" I will be more beautiful if you run me on IE");
+   
+    
     //generate random number
     var minNum = 19;
     var maxNum = 121;
@@ -57,4 +60,6 @@ window.onload = function what() {
 
     }
     reset();
+   
 }
+

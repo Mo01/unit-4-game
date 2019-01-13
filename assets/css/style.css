@@ -4,14 +4,19 @@ body{
  height: 100%;
  
 }
+.div1{
+    margin-bottom: 10px;
+}
 #CC{
     background-color: orange;
+    font-size: 40pt;
     color: white;
-    width: 300px;
-    height: 60px;
+    display: inline-block;
     text-align: center;
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
+    padding: 10px !important;
+    margin: 0 !important; 
+    
+    
 
 }
 #score{
