@@ -1,4 +1,5 @@
 window.onload = function what() {
+    alert(" I will be more beautiful if you run me on IE");
     //generate random number
     var minNum = 19;
     var maxNum = 121;
@@ -7,6 +8,14 @@ window.onload = function what() {
     var total = 0;
     var win = 0;
     var losse = 0;
+    var audio = new Audio("assets/audio/GoT.MP3");
+    var audioBtn = new Audio("assets/audio/CK4.MP3");
+    var audioWin = new Audio("assets/audio/win.MP3");
+    var audioLosse = new Audio("assets/audio/losse.MP3");
+    audio.loop = true;
+    audio.volume = 0.1;
+    audio.play();
+    
 
     //Generate random numbers
     var randonNumber = Math.floor(Math.random() * (maxNum - minNum)) + minNum;  // 19 - 120
@@ -15,12 +24,14 @@ window.onload = function what() {
     //Runs every click
     var clickHandler = function () {
         let btnVal = parseInt($(this).val());
+        audioBtn.play();
         total += btnVal;
         $("#total").text(total);
         if (total === randonNumber) {
             randonNumber = Math.floor(Math.random() * (maxNum - minNum)) + minNum;
             total = 0;
             win++;
+            audioWin.play();
             $("#wins").text("Wins = " + win);
             reset();
         }
@@ -28,6 +39,7 @@ window.onload = function what() {
             randonNumber = Math.floor(Math.random() * (maxNum - minNum)) + minNum;
             total = 0;
             losse++;
+            audioLosse.play();
             $("#losses").text("Losses = " + losse);
             reset();
         }
